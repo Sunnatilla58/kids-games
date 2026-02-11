@@ -80,36 +80,36 @@ const RESULT_DISPLAY_MS = 3000;
 const THEME_KEY = "theme";
 
 const bamboozleCards = [
-  { word: "apple", emoji: "??", points: 10 },
-  { word: "banana", emoji: "??", points: 10 },
-  { word: "cat", emoji: "??", points: 5 },
-  { word: "dog", emoji: "??", points: 5 },
-  { word: "sun", emoji: "??", points: 8 },
-  { word: "moon", emoji: "??", points: 8 },
-  { word: "car", emoji: "??", points: 6 },
-  { word: "ball", emoji: "?", points: 6 },
-  { word: "fish", emoji: "??", points: 7 },
-  { word: "bird", emoji: "??", points: 7 },
-  { word: "house", emoji: "??", points: 9 },
-  { word: "tree", emoji: "??", points: 9 }
+  { word: "apple", emoji: "🍎", points: 10 },
+  { word: "banana", emoji: "🍌", points: 10 },
+  { word: "cat", emoji: "🐱", points: 5 },
+  { word: "dog", emoji: "🐶", points: 5 },
+  { word: "sun", emoji: "☀️", points: 8 },
+  { word: "moon", emoji: "🌙", points: 8 },
+  { word: "car", emoji: "🚗", points: 6 },
+  { word: "ball", emoji: "⚽", points: 6 },
+  { word: "fish", emoji: "🐟", points: 7 },
+  { word: "bird", emoji: "🐦", points: 7 },
+  { word: "house", emoji: "🏠", points: 9 },
+  { word: "tree", emoji: "🌳", points: 9 }
 ];
 
 const spellWords = [
-  { word: "apple", emoji: "??" },
-  { word: "banana", emoji: "??" },
-  { word: "cat", emoji: "??" },
-  { word: "dog", emoji: "??" },
-  { word: "sun", emoji: "??" },
-  { word: "moon", emoji: "??" },
-  { word: "car", emoji: "??" },
-  { word: "fish", emoji: "??" }
+  { word: "apple", emoji: "🍎" },
+  { word: "banana", emoji: "🍌" },
+  { word: "cat", emoji: "🐱" },
+  { word: "dog", emoji: "🐶" },
+  { word: "sun", emoji: "☀️" },
+  { word: "moon", emoji: "🌙" },
+  { word: "car", emoji: "🚗" },
+  { word: "fish", emoji: "🐟" }
 ];
 
 const pickWords = [
-  { word: "cat", options: ["??", "??", "??", "??"], answer: "??" },
-  { word: "sun", options: ["??", "?", "??", "??"], answer: "??" },
-  { word: "ball", options: ["?", "??", "??", "??"], answer: "?" },
-  { word: "car", options: ["??", "??", "??", "??"], answer: "??" }
+  { word: "cat", options: ["🐱", "🐶", "🐟", "🐦"], answer: "🐱" },
+  { word: "sun", options: ["🌙", "⚽", "☀️", "🌳"], answer: "☀️" },
+  { word: "ball", options: ["⚽", "🐱", "🚗", "🍎"], answer: "⚽" },
+  { word: "car", options: ["🏠", "🚗", "🌳", "🐶"], answer: "🚗" }
 ];
 
 const actionDiceTaskPools = {
@@ -145,7 +145,7 @@ const actionDiceTaskPools = {
   ]
 };
 
-const actionDiceFaces = ["", "?", "?", "?", "?", "?", "?"];
+const actionDiceFaces = ["", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
 
 function showAuth() {
   authEl.hidden = false;
@@ -571,7 +571,7 @@ function setupActionDice() {
   if (!actionDiceFace || !actionDiceNumber || !actionDiceTask) return;
   actionDiceStarted = false;
   actionDiceScore = 0;
-  actionDiceFace.textContent = "??";
+  actionDiceFace.textContent = "🎲";
   actionDiceNumber.textContent = "-";
   actionDiceTask.textContent = "Press Start to begin.";
   currentActionDiceTask = "";
